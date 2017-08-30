@@ -39,9 +39,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   // Universal Control layer
   [_CL] = KEYMAP(
-    KC_WAKE,  KC_SLEP,  KC_PWR,   _____,    _____,    _____,    _____,    _____,    _____,    _____,    _____,    _____,              _____,    _____,    _____,    \
-    _____,    _____,    KC_F14,   KC_VOLU,  KC_F15,   _____,    _____,    _____,    BL_INC,   KC_MSTP,  KC_MPLY,  KC_MPRV,            KC_MNXT,            _____,    \
-    TG(_ML),  _____,    _____,    KC_VOLD,  KC_MUTE,  _____,    _____,    _____,    BL_DEC,   _____,    KC_MRWD,  KC_MFFD,            _____,              _____,    \
-    KC_CAPS,  _____,    _____,    RGB_HUD,  RGB_SAD,  RGB_VAD,  RGB_TOG,  RGB_VAI,  RGB_SAI,  RGB_HUI,  _____,    _____,              _____,    KC_CAPS,  TG(_CL),  \
-    _____,    _____,    _____,                                  RGB_MOD,                                _____,    _____,              _____,    _____,    _____     )
+    KC_PWR,   _____,    KC_MSTP,  KC_MPLY,  KC_MPRV,  KC_MNXT,  _____,    KC_P7,    KC_P8,    KC_P9,    KC_PSLS,  _____,              _____,    _____,    _____,    \
+    _____,    _____,    KC_VOLD,  KC_VOLU,  KC_MUTE,  _____,    _____,    KC_P4,    KC_P5,    KC_P6,    KC_PAST,  BL_DEC,             BL_INC,             RGB_TOG,  \
+    TG(_ML),  _____,    RGB_VAI,  RGB_SAI,  RGB_HUI,  _____,    _____,    KC_P1,    KC_P2,    KC_P3,    KC_PMNS,  _____,              _____,              BL_TOGG,  \
+    KC_CAPS,  _____,    RGB_HUD,  RGB_SAD,  RGB_VAD,  _____,    _____,    KC_P0,    KC_PDOT,  KC_PENT,  KC_PPLS,  _____,              _____,    __^__,    TG(_CL),  \
+    _____,    _____,    _____,                                  RGB_MOD,                                _____,    _____,              __^__,    __^__,    __^__     )
 };
