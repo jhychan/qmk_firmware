@@ -3,7 +3,7 @@
 
 #define _____ KC_NO
 #define __v__ KC_TRNS
-#define RSFT_T(KC_SLSH) RSF_SLSH
+#define RSF_SLSH RSFT_T(KC_SLSH)
 
 // Layer enumerations
 enum {
