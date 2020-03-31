@@ -3,11 +3,16 @@
 
 #define _____ KC_NO
 #define __v__ KC_TRNS
+#define _RSKU RSFT_T(KC_UP)
+#define _RAKD RALT_T(KC_DOWN)
+#define _FNKL LT(_FN,KC_LEFT)
+#define _CTKR RCTL_T(KC_RIGHT)
 
 // Layer enumerations
 enum {
   _BL = 0, // Windows Base layer
   _GL    , // Guest mode layer (standard 60% ANSI)
+  _JL    , // Ju-mode layer
   _FN    , // Universal Function layer
   _CL    , // Universal Control layer
   _MP      // Mouse/Pointer Layer
@@ -20,7 +25,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_LBRC,  KC_RBRC,            KC_BSPC,  \
     KC_LCTL,  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,     KC_H,     KC_J,     KC_K,     KC_L,     KC_SCLN,  KC_QUOT,  _____,              KC_ENT,   \
     KC_LSFT,  _____,    KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  _____,    KC_RSFT,  _____,    \
-    KC_NUHS,  MO(_FN),  KC_RALT,                                KC_SPC,                                 KC_RGUI,  MO(_FN),  _____,    KC_RALT,  TG(_GL)   ),
+    KC_NUHS,  MO(_FN),  KC_RALT,                                KC_SPC,                                 KC_RGUI,  MO(_FN),  _____,    KC_RALT,  TG(_JL)   ),
 
   // Guest mode layer
   [_GL] = LAYOUT_all(
@@ -29,6 +34,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_CAPS,  __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    _____,              __v__,    \
     __v__,    _____,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    _____,    __v__,    _____,    \
     KC_LCTL,  KC_LGUI,  KC_LALT,                                __v__,                                  KC_RALT,  KC_RGUI,  _____,    KC_APP,   __v__     ),
+
+  // Ju-mode layer
+  [_JL] = LAYOUT_all(
+    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    KC_NUBS,  KC_DEL,   \
+    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,              KC_BSPC,  \
+    KC_CAPS,  __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    _____,              __v__,    \
+    __v__,    _____,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    __v__,    _____,    _RSKU,    _____,    \
+    KC_LCTL,  KC_LGUI,  KC_LALT,                                __v__,                                  __v__,    _FNKL,    _____,    _RAKD,    _CTKR     ),
 
   // Universal Function layer
   [_FN] = LAYOUT_all(
